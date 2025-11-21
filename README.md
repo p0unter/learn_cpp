@@ -21,3 +21,9 @@
   </li>
 </ul>
 
+### Legal
+This documentation has been created to make it easier for Turkish speakers to access and understand the resources offered by learncpp.com. There is absolutely no intention to plagiarize or copy any content. The source of all articles is provided on learncpp.com.
+
+If you have any copyright-related concerns, please contact me at <a href="mailto:p0unter@proton.me">my email address</a>.
+
+Best regards, Pounter.
