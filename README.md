@@ -1,9 +1,6 @@
 ## C++ Docs (C++ Dökümanları) [TR]
-learncpp.com Documents translated from English to Turkish [.md Format] (learncpp.com İngilizceden Türkçeye çevrilmiş belgeler [.md Formatı])
 
-<br>
-Source(Kaynak): <a href="https://learncpp.com">learncpp.com</a><br>
-Table of Contents(İçerik Tablosu):
+### Table of Contents(İçerik Tablosu):
 <ul>
   <li><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-these-tutorials/">Introduction to these tutorials</a><br><a href="https://github.com/p0unter/learn_cpp/blob/main/1%20%3E%20E%C4%9Fitime%20giri%C5%9F%20(Introduction%20to%20these%20tutorials).md">[+]</a> Bu eğitime giriş</li>
   <li><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-programming-languages/">Introduction to programs and programming languages</a><br><a href="#">[+]</a> Programlara ve programlama dillerine giriş</li>
