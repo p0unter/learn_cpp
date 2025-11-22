@@ -1,23 +1,23 @@
-## C++ Docs (C++ Dökümanları) [TR]
+<img height="80" alt="trflag" src="https://github.com/user-attachments/assets/07c78c90-2b3f-4c5d-b010-b711e709ea23" align="right" />
 
-### Table of Contents(İçerik Tablosu):
-<ul>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-these-tutorials/">Introduction to these tutorials</a><br><a href="https://github.com/p0unter/learn_cpp/blob/main/1%20%3E%20E%C4%9Fitime%20giri%C5%9F%20(Introduction%20to%20these%20tutorials).md">[+]</a> Bu eğitime giriş</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-programming-languages/">Introduction to programs and programming languages</a><br><a href="#">[+]</a> Programlara ve programlama dillerine giriş</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-cplusplus/">Introduction to C/C++</a><br><a href="#">[+]</a> C/C++'a Giriş</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-cpp-development/">Introduction to C++ development</a><br><a href="#">[+]</a> C++ geliştirmeye giriş</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/">Introduction to the compiler, linker, and libraries</a><br><a href="#">[+]</a> Derleyici(Compiler), bağlayıcı(Linker) ve kütüphanelere giriş</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/installing-an-integrated-development-environment-ide/">Installing an Integrated Development Environment (IDE)</a><br><a href="#">[+]</a> Entegre Geliştirme Ortamı (Integrated Development Environment - IDE) Kurulumu</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/compiling-your-first-program/">Compiling your first program</a><br><a href="#">[+]</a> İlk programınızı derleme</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/a-few-common-cpp-problems/">A few common C++ problems</a><br><a href="#">[+]</a> Birkaç yaygın C++ sorunu</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/configuring-your-compiler-build-configurations/">Configuring your compiler: Build configurations</a><br><a href="#">[+]</a> Derleyicinizi yapılandırma: Derleme yapılandırmaları</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/configuring-your-compiler-compiler-extensions/">Configuring your compiler: Compiler extensions</a><br><a href="#">[+]</a> Derleyicinizi yapılandırma: Derleyici uzantıları</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/configuring-your-compiler-warning-and-error-levels/">Configuring your compiler: Warning and error levels</a><br><a href="#">[+]</a> Derleyicinizi yapılandırma: Uyarı ve hata düzeyleri</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/configuring-your-compiler-choosing-a-language-standard/">Configuring your compiler: Choosing a language standard</a><br><a href="#">[+]</a> Derleyicinizi yapılandırma: Dil standardı seçme</li>
-  <li><a href="https://www.learncpp.com/cpp-tutorial/what-language-standard-is-my-compiler-using/">What language standard is my compiler using?</a><br><a href="#">[+]</a> Derleyicim hangi dil standardını kullanıyor?</li>
-</ul>
+## C++ Dökümanları (C++ Docs)
 
-### Legal
+#### İçerik Tablosu (Table of Contents):
+- **Başlangıç** (Introduction / Getting Started)
+  - [[+]](https://github.com/p0unter/learn_cpp/blob/main/1%20%3E%20E%C4%9Fitime%20giri%C5%9F%20(Introduction%20to%20these%20tutorials).md) Bu eğitime giriş \ [Introduction to these tutorials](https://www.learncpp.com/cpp-tutorial/introduction-to-these-tutorials/)
+  - [[+]](https://github.com/p0unter/learn_cpp/blob/main/2%20%3E%20Programlara%20ve%20programlama%20dillerine%20giri%C5%9F(Introduction%20to%20programs%20and%20programming%20languages).md) Programlara ve programlama dillerine giriş \ [Introduction to programs and programming languages](https://www.learncpp.com/cpp-tutorial/introduction-to-programming-languages/)
+  - [+] C/C++'a Giriş \ [Introduction to C/C++](https://www.learncpp.com/cpp-tutorial/introduction-to-cplusplus/)
+  - [+] C++ geliştirmeye giriş \ [Introduction to C++ development](https://www.learncpp.com/cpp-tutorial/introduction-to-cpp-development/)
+  - [+] Derleyici(Compiler), bağlayıcı(Linker) ve kütüphanelere giriş \ [Introduction to the compiler, linker, and libraries](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
+  - [+] Entegre Geliştirme Ortamı (Integrated Development Environment - IDE) Kurulumu \ [Installing an Integrated Development Environment (IDE)](https://www.learncpp.com/cpp-tutorial/installing-an-integrated-development-environment-ide/)
+  - [+] Birkaç yaygın C++ sorunu \ [A few common C++ problems](https://www.learncpp.com/cpp-tutorial/a-few-common-cpp-problems/)
+  - [+] Derleyicinizi yapılandırma: Derleme yapılandırmaları \ [Configuring your compiler: Build configurations](https://www.learncpp.com/cpp-tutorial/configuring-your-compiler-build-configurations/)
+  - [+] Derleyicinizi yapılandırma: Derleyici uzantıları \ [Configuring your compiler: Compiler extensions](https://www.learncpp.com/cpp-tutorial/configuring-your-compiler-compiler-extensions/)
+  - [+] Derleyicinizi yapılandırma: Uyarı ve hata düzeyleri \ [Configuring your compiler: Warning and error levels](https://www.learncpp.com/cpp-tutorial/configuring-your-compiler-warning-and-error-levels/)
+  - [+] Derleyicinizi yapılandırma: Dil standardı seçme \ [Configuring your compiler: Choosing a language standard](https://www.learncpp.com/cpp-tutorial/configuring-your-compiler-choosing-a-language-standard/)
+  - [+] Derleyicim hangi dil standardını kullanıyor? \ [What language standard is my compiler using?](https://www.learncpp.com/cpp-tutorial/what-language-standard-is-my-compiler-using/)
+
+## Legal
 This documentation has been created to make it easier for Turkish speakers to access and understand the resources offered by learncpp.com. There is absolutely no intention to plagiarize or copy any content. The source of all articles is provided on learncpp.com.
 
 If you have any copyright-related concerns, please contact me at <a href="mailto:p0unter@proton.me">my email address</a>.
