@@ -19,7 +19,8 @@ Platformlar genellikle üzerlerinde çalışan programlar için faydalı hizmetl
 
 Programlardan bahsettiğimize göre, şimdi programlama dillerine geçelim. Bu sadece bir tarih dersi değil, aynı zamanda gelecek derslerde karşımıza çıkacak terminolojiyi de tanıtacağız.
 
-## Makine Dili
+---
+### Makine Dili
 
 Bir bilgisayarın işlemcisi C++'ı anlayamaz. İşlemciler yalnızca makine dilinde (veya makine kodunda) yazılmış talimatları işleyebilir. Belirli bir işlemcinin anlayabileceği tüm olası makine dili talimatları kümesine komut seti denir.
 
@@ -36,22 +37,103 @@ Bu talimatların nasıl düzenlendiği ve yorumlandığı bu eğitim dizisinin k
 > ### Önerilen İçerik
 > Bir "CPU ailesi" resmi olarak "komut seti mimarisi" (kısaca "ISA") olarak adlandırılır. Wikipedia'da farklı [CPU ailelerinin bir listesi](https://en.wikipedia.org/wiki/Comparison_of_instruction_set_architectures#Instruction_sets) bulunmaktadır.
 
-## Assembly Dili
+---
+### Assembly Dili
 
 Makine dili talimatları (örneğin ```10110000 01100001```) bir CPU için idealdir, ancak insanların anlaması zordur. Programlar (en azından tarihsel olarak) insanlar tarafından yazıldığı ve yönetildiği için, programlama dillerinin insan ihtiyaçları göz önünde bulundurularak tasarlanması mantıklıdır.
 
-Bir derleme dili (kısaca "assembly" olarak da adlandırılır), özünde daha anlaşılır bir makine dili gibi çalışan bir programlama dilidir. Yukarıdakiyle aynı talimatın x86 derleme dilindeki hali şöyledir: ```mov al, 0x61```.
+Bir derleme dili (kısaca "Assembly" olarak da adlandırılır), özünde daha anlaşılır bir makine dili gibi çalışan bir programlama dilidir. Yukarıdakiyle aynı talimatın x86 derleme dilindeki hali şöyledir: ```mov al, 0x61```.
 
 > ### Opsiyonel Okuma
-> Bu talimat, assembly dilini makine dilinden daha okunabilir kılan birçok özelliği göstermektedir.
-
+> Bu talimat, Assembly dilini makine dilinden daha okunabilir kılan birçok özelliği göstermektedir.
+>
 > - İşlem (talimatların ne yaptığı) kısa bir anımsatıcıyla (genellikle 3-5 harfli bir ad) tanımlanır. mov, bitleri bir konumdan diğerine kopyalayan bir işlem olan "taşı" için bir anımsatıcı olduğu kolayca anlaşılabilir.
 > - Kayıtlara (CPU'nun bir parçası olan hızlı bellek konumları) bir isimle erişilir. al, x86 CPU'daki belirli bir kaydın adıdır.
 > - Sayılar daha kullanışlı bir biçimde belirtilebilir. Assembly dilleri genellikle hem ondalık sayıları (örneğin 97) hem de onaltılık sayıları (örneğin 0x61) destekler.
-
+>
 > mov al, 0x61 komutunun onaltılık sayı 0x61'i al CPU kaydına kopyaladığını anlamak oldukça kolaydır.
 
-İşlemciler assembly dilini anlamadığından, assembly programlarının çalıştırılabilmesi için makine diline çevrilmesi gerekir. Bu çeviri, assembly adı verilen bir program tarafından yapılır. Her assembly dili talimatı genellikle eşdeğer bir makine dili talimatını yansıtacak şekilde tasarlandığından, çeviri süreci genellikle basittir.
+İşlemciler Assembly dilini anlamadığından, Assembly programlarının çalıştırılabilmesi için makine diline çevrilmesi gerekir. Bu çeviri, Assembly adı verilen bir program tarafından yapılır. Her Assembly dili talimatı genellikle eşdeğer bir makine dili talimatını yansıtacak şekilde tasarlandığından, çeviri süreci genellikle basittir.
 
-Tıpkı her CPU ailesinin kendi makine dili olduğu gibi, her CPU ailesinin de kendi assembly dili vardır (bu dil, aynı CPU ailesi için makine diline dönüştürülmek üzere tasarlanmıştır). Bu, birçok farklı assembly dili olduğu anlamına gelir. Kavramsal olarak benzer olsalar da, farklı assembly dilleri farklı talimatları destekler, farklı adlandırma kuralları kullanır vb.
+Tıpkı her CPU ailesinin kendi makine dili olduğu gibi, her CPU ailesinin de kendi Assembly dili vardır (bu dil, aynı CPU ailesi için makine diline dönüştürülmek üzere tasarlanmıştır). Bu, birçok farklı Assembly dili olduğu anlamına gelir. Kavramsal olarak benzer olsalar da, farklı Assembly dilleri farklı talimatları destekler, farklı adlandırma kuralları kullanır vb.
 
+---
+### Düşük-Seviyeli Dillere Giriş
+
+Makine dilleri ve Assembly dilleri, makinenin mimarisinden minimum düzeyde soyutlama sağladıkları için düşük seviyeli diller olarak kabul edilir. Başka bir deyişle, programlama dilinin kendisi, üzerinde çalıştırılacağı belirli komut seti mimarisine göre uyarlanmıştır.
+
+Düşük seviyeli dillerin bir takım önemli dezavantajları vardır:
+- Düşük seviyeli bir dilde yazılan programlar taşınabilir değildir. Düşük seviyeli bir dil belirli bir komut seti mimarisine göre uyarlandığından, sadece bu dil ile yazılan programlar arasında taşıma yapılabilir. Bu tür programları diğer mimarilere taşımak genellikle kolay bir işlem değildir.
+- Düşük seviyeli bir dilde program yazmak, mimarinin kendisi hakkında ayrıntılı bilgi gerektirir. Örneğin, ```mov al, 061h``` komutu, ```al```'nin bu belirli platformda bulunan bir CPU kaydına atıfta bulunduğunu bilmeyi ve bu kayıtla nasıl çalışılacağını anlamayı gerektirir. Farklı bir mimaride, bu kayıt farklı bir isme sahip olabilir, farklı sınırlamalara sahip olabilir veya hiç mevcut olmayabilir.
+- Düşük seviyeli programların anlaşılması zordur. Tek tek Assembly talimatları oldukça anlaşılır olsa da, Assembly kodunun bir bölümünün gerçekte ne yaptığını anlamak yine de zor olabilir. Assembly programları, basit görevleri bile yerine getirmek için birçok talimat gerektirdiğinden, genellikle oldukça uzun olurlar.
+- Assembly dili yalnızca ilkel yetenekler sunduğu için, önemli ölçüde karmaşık programlar yazmak zordur. Programcı, ihtiyaç duyduğu her şeyi kendisi uygulamak zorunda kalır.
+
+Düşük seviyeli dillerin temel avantajı hızlı olmalarıdır. Assembly, performans açısından kritik öneme sahip kod bölümleri olduğunda günümüzde hala kullanılmaktadır. Ayrıca, birazdan bahsedeceğimiz birkaç başka durumda da kullanılmaktadır.
+
+---
+### Yüksek-Seviyeli Dillere Giriş
+
+Yukarıda belirtilen birçok olumsuzluğun üstesinden gelmek için C, C++, Pascal (ve daha sonra Java, Javascript ve Perl gibi diller) gibi yeni "yüksek-seviyeli" programlama dilleri geliştirildi.
+
+Yukarıdaki talimatın aynısı C/C++'da şu şekildedir: ```a = 97;```.
+
+Tıpkı montaj programlarında olduğu gibi (makine diline çevrilmesi gerekir), üst düzey bir dilde yazılan programların çalıştırılabilmesi için önce makine diline çevrilmesi gerekir. Bunun iki temel yolu vardır: derleme ve yorumlama.
+
+C++ programları genellikle derlenir. Derleyici, bir dilin (genellikle yüksek-seviyeli bir dilin) ​​kaynak kodunu okuyup başka bir dile (genellikle düşük-seviyeli bir dilin) ​​çeviren bir programdır (veya program koleksiyonudur-collection-). Örneğin, bir C++ derleyicisi, C++ kaynak kodunu makine koduna çevirir.
+
+> ### Opsiyonel Okuma
+> Çoğu C++ derleyicisi, assembly kodu üretecek şekilde de yapılandırılabilir. Bu, bir programcının derleyicinin programın belirli bir bölümü için hangi talimatları ürettiğini görmek istediği durumlarda faydalıdır.
+
+Derleyici tarafından üretilen makine kodu, daha sonra başkalarına dağıtılabilen ve işletim sistemi tarafından başlatılabilen bir yürütülebilir dosya (makine dili komutları içeren) olarak paketlenebilir. Özellikle, yürütülebilir dosyayı çalıştırmak için derleyicinin kurulu olması gerekmez.
+
+Başlangıçta, derleyiciler ilkeldi ve yavaş, optimize edilmemiş montaj veya makine kodu üretiyorlardı. Ancak yıllar geçtikçe, derleyiciler hızlı, optimize edilmiş kod üretme konusunda çok iyi hale geldiler ve bazı durumlarda insanlardan daha iyi iş çıkarabiliyorlar!
+
+Derleme sürecinin basitleştirilmiş bir gösterimi aşağıda verilmiştir:
+
+<img src="https://www.learncpp.com/images/CppTutorial/Chapter0/Compiling-min.png" height="150">
+
+Alternatif olarak, yorumlayıcı(interpreter), kaynak kodundaki talimatları önce derlenmelerini gerektirmeden doğrudan yürüten bir programdır. Yorumlayıcılar derleyicilerden daha esnek olma eğilimindedir, ancak yorumlama işlemi program her çalıştırıldığında yapılmak zorunda olduğu için programları çalıştırırken daha az verimlidir. Bu aynı zamanda, yorumlanan programın çalıştırılacağı her makineye yorumlayıcının yüklenmesi gerektiği anlamına da gelir.
+
+Yorumlama(interpreter) sürecinin basitleştirilmiş bir gösterimi aşağıda verilmiştir:
+
+<img src="https://www.learncpp.com/images/CppTutorial/Chapter0/Interpreting-min.png" height="150">
+
+> ### Opsiyonel Okuma
+> Derleyiciler ile yorumlayıcıların avantajlarının iyi bir karşılaştırması [burada](https://stackoverflow.com/a/38491646) bulabilirsiniz.
+> Derlenmiş programların bir diğer avantajı, derlenmiş bir programı dağıtmak için kaynak kodunu dağıtmaya gerek olmamasıdır. Açık kaynak olmayan bir ortamda, bu durum fikri mülkiyet (Intellectual Property - IP) koruma açısından önemlidir.
+
+Çoğu yüksek seviyeli dil derlenebilir veya yorumlanabilir. Geleneksel olarak, C, C++ ve Pascal gibi yüksek seviyeli diller derlenirken, Perl ve Javascript gibi “komut dosyası” dilleri genellikle yorumlanır. Java gibi bazı diller ise ikisinin bir karışımını kullanır. Daha sonra C++ derleyicilerini daha ayrıntılı olarak inceleyeceğiz.
+
+---
+### Yüksek-Seviyeli Dillerin Avantajları
+
+Yüksek-seviyeli diller, temel mimariden yüksek düzeyde soyutlama sağladıkları için bu şekilde adlandırılırlar.
+
+```a = 97;``` komutunu ele alalım. Bu komut, değerin tam olarak nereye yerleştirileceğini veya CPU'nun bu değeri depolamak için hangi özel makine kodu komutuna ihtiyaç duyduğunu bilmemize gerek kalmadan, 97 değerini bellekte bir yere depolamamıza olanak tanır. Aslında, bu komutta platforma özgü hiçbir şey yoktur. Derleyici, bu C++ komutunun platforma özgü makine koduna nasıl çevrileceğini bulmak için tüm işi yapar.
+
+Yüksek seviyeli diller, programcıların programları çalıştırılacak platform hakkında fazla bilgi sahibi olmadan yazabilmelerini sağlar. Bu, programların yazılmasını kolaylaştırmakla kalmaz, aynı zamanda programları önemli ölçüde daha taşınabilir hale getirir. Dikkatli olursak, C++ derleyicisi olan her platformda derlenebilecek tek bir C++ yazabiliriz! Birden fazla platformda çalışmak üzere tasarlanmış bir programa çapraz platform(cross-platform) denir.
+
+<img src="https://www.learncpp.com/images/CppTutorial/Chapter0/Portability-min.png" height="150">
+
+> ### Tecrübeli Okuyucular İçin
+> Aşağıda, C++ kodunuzun taşınabilirliğini engelleyebilecek unsurların kısmi bir listesi bulunmaktadır:
+>
+> - Microsoft Windows gibi birçok işletim sistemi, kodunuzda kullanabileceğiniz platforma özgü özellikler sunar. Bu özellikler, belirli bir işletim sistemi için program yazmayı çok daha kolay hale getirebilir veya o işletim sistemi ile başka türlü mümkün olmayacak kadar derin bir entegrasyon sağlayabilir.
+> - Birçok üçüncü taraf kütüphanesi yalnızca belirli platformlarda kullanılabilir. Bunlardan birini kullanıyorsanız, o kütüphanenin desteklendiği platformlarla sınırlı kalacaksınız.
+> - Bazı derleyiciler, yalnızca o derleyicide kullanılabilen özellikler olan derleyiciye özgü uzantıları destekler. Bunları kullanırsanız, programlarınız aynı uzantıları desteklemeyen diğer derleyiciler tarafından değiştirilmeden derlenemez. Derleyiciyi yükledikten sonra bunlar hakkında daha ayrıntılı bilgi vereceğiz.
+> - Bazı durumlarda, C++ dili derleyicinin bir şeyin nasıl davranması gerektiğini belirlemesine izin verir.
+>
+> Yalnızca tek bir platformu hedefliyorsanız, taşınabilirlik o kadar önemli olmayabilir. Ancak günümüzde birçok uygulama, erişim alanını genişletmek için birden fazla platformu hedeflemektedir. Örneğin, bir mobil uygulama muhtemelen hem iOS hem de Android'i hedeflemek isteyecektir.
+> Taşınabilirlik başlangıçta yararlı görünmese de, başlangıçta tek bir platformu (örneğin PC) hedefleyen birçok uygulama, bir dereceye kadar başarı ve ilgi gördükten sonra diğer platformlara (örneğin Mac ve çeşitli konsollar) taşınmaya karar verdi. Taşınabilirliği göz önünde bulundurarak başlamazsanız, uygulamanızı daha sonra taşımak daha fazla iş gerektirecektir.
+
+Bu derslerde, programlarımızın modern bir C++ derleyicisine sahip herhangi bir platformda çalışabilmesi için, platformlara özgü kodlardan mümkün olduğunca kaçınacağız.
+
+Yüksek-seviyeli dillerin başka avantajları da vardır:
+- Yüksek-seviyeli bir dilde yazılmış programlar, komutları günlük kullandığımız doğal dil ve matematiğe daha çok benzediği için okunması, yazılması ve öğrenilmesi daha kolaydır. Çoğu durumda, yüksek seviyeli diller, düşük seviyeli dillerle aynı görevleri gerçekleştirmek için daha az komut gerektirir. Örneğin, C++'da a = b * 2 + 5; komutunu tek satırda yazabilirsiniz. Assembly dilinde ise bu komut için 4 ila 6 farklı komut gerekir. Bu, yüksek seviyeli dillerle yazılan programları daha özlü hale getirir ve anlaşılmasını kolaylaştırır.
+- Yüksek-seviyeli diller genellikle, bir bellek bloğu talep etmek veya metni işlemek gibi yaygın programlama görevlerini kolaylaştıran ek özellikler içerir. Örneğin, büyük bir metin bloğu içinde “abc” karakterlerinin olup olmadığını belirlemek için tek bir komut yeterlidir (ve eğer varsa, “abc” bulunana kadar kaç karakterin incelenmesi gerektiği). Bu, karmaşıklığı ve geliştirme sürelerini önemli ölçüde azaltabilir.
+
+> ### İsimlendirme
+> C++ teknik olarak yüksek seviyeli bir dil olarak kabul edilse de, daha yeni programlama dilleri (örneğin script dilleri) daha da yüksek bir soyutlama seviyesi sunmaktadır. Bu nedenle, C++ bazen yanlış bir şekilde “düşük seviyeli dil” olarak adlandırılmaktadır.
+
+> ### Yazarın Notu
+> Günümüzde C++, muhtemelen orta düzey bir dil olarak tanımlanabilir. Ancak bu, C++'ın en önemli güçlü yönlerinden birini de ortaya koymaktadır: genellikle farklı soyutlama düzeylerinde çalışma olanağı sunar. Daha iyi performans ve hassasiyet için daha düşük bir düzeyde veya daha fazla kolaylık ve basitlik için daha yüksek bir düzeyde çalışmayı tercih edebilirsiniz.
