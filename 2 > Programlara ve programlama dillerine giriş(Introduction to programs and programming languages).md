@@ -137,3 +137,5 @@ Yüksek-seviyeli dillerin başka avantajları da vardır:
 
 > ### Yazarın Notu
 > Günümüzde C++, muhtemelen orta düzey bir dil olarak tanımlanabilir. Ancak bu, C++'ın en önemli güçlü yönlerinden birini de ortaya koymaktadır: genellikle farklı soyutlama düzeylerinde çalışma olanağı sunar. Daha iyi performans ve hassasiyet için daha düşük bir düzeyde veya daha fazla kolaylık ve basitlik için daha yüksek bir düzeyde çalışmayı tercih edebilirsiniz.
+
+[➔ Sonraki](https://github.com/p0unter/learn_cpp/blob/main/3%20%3E%20C%20/%20C%2B%2B'a%20Giri%C5%9F%20(Introduction%20to%20C%20/%20C%2B%2B).md)
