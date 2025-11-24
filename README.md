@@ -6,7 +6,7 @@
 - **Başlangıç** (Introduction / Getting Started)
   - [[+]](https://github.com/p0unter/learn_cpp/blob/main/1%20%3E%20E%C4%9Fitime%20giri%C5%9F%20(Introduction%20to%20these%20tutorials).md) Bu eğitime giriş \ [Introduction to these tutorials](https://www.learncpp.com/cpp-tutorial/introduction-to-these-tutorials/)
   - [[+]](https://github.com/p0unter/learn_cpp/blob/main/2%20%3E%20Programlara%20ve%20programlama%20dillerine%20giri%C5%9F(Introduction%20to%20programs%20and%20programming%20languages).md) Programlara ve programlama dillerine giriş \ [Introduction to programs and programming languages](https://www.learncpp.com/cpp-tutorial/introduction-to-programming-languages/)
-  - [+] C/C++'a Giriş \ [Introduction to C/C++](https://www.learncpp.com/cpp-tutorial/introduction-to-cplusplus/)
+  - [[+]](https://github.com/p0unter/learn_cpp/blob/ebf1f6f1cd4edad93f7e58b463b3f312eaa4e91e/3%20%3E%20C%20%5C%20C%2B%2B'a%20Giri%C5%9F%20(Introduction%20to%20C%20%5C%20C%2B%2B).md) C/C++'a Giriş \ [Introduction to C/C++](https://www.learncpp.com/cpp-tutorial/introduction-to-cplusplus/)
   - [+] C++ geliştirmeye giriş \ [Introduction to C++ development](https://www.learncpp.com/cpp-tutorial/introduction-to-cpp-development/)
   - [+] Derleyici(Compiler), bağlayıcı(Linker) ve kütüphanelere giriş \ [Introduction to the compiler, linker, and libraries](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
   - [+] Entegre Geliştirme Ortamı (Integrated Development Environment - IDE) Kurulumu \ [Installing an Integrated Development Environment (IDE)](https://www.learncpp.com/cpp-tutorial/installing-an-integrated-development-environment-ide/)
