@@ -3,7 +3,7 @@
 ## C++ Dökümanları (C++ Docs)
 
 #### İçerik Tablosu (Table of Contents):
-- **Başlangıç** (Introduction / Getting Started)
+- **0 - Başlangıç** (Introduction / Getting Started)
   - [0.1 [+]](https://github.com/p0unter/learn_cpp/blob/main/1%20%3E%20E%C4%9Fitime%20giri%C5%9F%20(Introduction%20to%20these%20tutorials).md) Bu eğitime giriş \ [Introduction to these tutorials](https://www.learncpp.com/cpp-tutorial/introduction-to-these-tutorials/)
   - [0.2 [+]](https://github.com/p0unter/learn_cpp/blob/main/2%20%3E%20Programlara%20ve%20programlama%20dillerine%20giri%C5%9F(Introduction%20to%20programs%20and%20programming%20languages).md) Programlara ve programlama dillerine giriş \ [Introduction to programs and programming languages](https://www.learncpp.com/cpp-tutorial/introduction-to-programming-languages/)
   - [0.3 [+]](https://github.com/p0unter/learn_cpp/blob/ebf1f6f1cd4edad93f7e58b463b3f312eaa4e91e/3%20%3E%20C%20%5C%20C%2B%2B'a%20Giri%C5%9F%20(Introduction%20to%20C%20%5C%20C%2B%2B).md) C/C++'a Giriş \ [Introduction to C/C++](https://www.learncpp.com/cpp-tutorial/introduction-to-cplusplus/)
