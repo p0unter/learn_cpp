@@ -50,3 +50,5 @@ C ve C++'ın temel tasarım felsefesi, “programcıya güven” olarak özetlen
 > Hayır! C++ ile başlamak tamamen uygundur ve size bu süreçte bilmeniz gereken her şeyi (kaçınmanız gereken tuzaklar dahil) öğreteceğiz.
 >
 > C++'ı öğrendikten sonra, ihtiyacınız olursa standart C'yi öğrenmek oldukça kolay olacaktır. Günümüzde C, çoğunlukla niş kullanım alanlarında kullanılmaktadır: gömülü cihazlarda çalışan kodlar, yalnızca C ile arayüz oluşturabilen diğer dillerle etkileşim kurmanız gerektiğinde vb. Diğer çoğu durumda C++ kullanılması önerilir.
+
+[➔ Sonraki](https://github.com/p0unter/learn_cpp/blob/fbfde1a4f4999eee0017d769462eafcc511fcb3b/0.4%20%3E%20C%2B%2B%20geli%C5%9Ftirmeye%20giri%C5%9F%20(Introduction%20to%20C%2B%2B%20development).md)
